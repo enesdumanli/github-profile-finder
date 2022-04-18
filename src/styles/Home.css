@@ -1,0 +1,42 @@
+.general-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 850px;
+  background-color: black;
+}
+.home-container {
+  margin-top: 300px; /* this will be changed. pixel perfect olacak. */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  color: white;
+  font-family: "Roboto", monospace;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+}
+
+#someinput {
+  background: #0a0a0a;
+  color: #acacac;
+  border: 1px solid #292929;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 270px;
+  height: 44px;
+  left: 596px;
+  top: 549px;
+  padding-left: 15px;
+}
+
+#someinput::placeholder {
+  color: #acacac;
+}
+
+#someinput:focus {
+  outline: none;
+}
