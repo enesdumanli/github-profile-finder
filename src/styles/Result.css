@@ -1,0 +1,13 @@
+.general-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 850px;
+  background-color: black;
+}
+.home-container {
+  margin-top: 300px; /* this will be changed. pixel perfect olacak. */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

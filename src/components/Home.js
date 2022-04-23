@@ -7,7 +7,8 @@ function Home() {
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
-      navigate("/dashboard");
+      console.log(e);
+      navigate("/result", { state: { search: e.target.value } });
     }
   };
 
