@@ -1,5 +1,4 @@
 .general-container {
-  display: flex;
   align-items: center;
   flex-direction: column;
   height: 850px;
@@ -7,7 +6,176 @@
 }
 .home-container {
   margin-top: 300px; /* this will be changed. pixel perfect olacak. */
-  display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.result-top-container {
+  align-items: center;
+  flex-direction: column;
+  background: #0a0a0a;
+  border: 1px solid #292929;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: absolute;
+  top: 16.82%;
+  width: 548px;
+  height: 277px;
+}
+.result-top-container-logo {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  border-radius: 100%;
+  right: 39.78%;
+  bottom: 80%; /* this will be changed. pixel perfect olacak. */
+  background: #222222;
+}
+.result-top-container-name {
+  position: absolute;
+  left: 41.23%;
+  top: 26.14%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.result-top-container-username {
+  position: absolute;
+  left: 41.98%;
+  top: 35.55%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #ffffff;
+}
+
+.result-repository-headline {
+  position: absolute;
+  width: 126px;
+  height: 17px;
+  top: 473px;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /*width: 130px;
+  height: 24px;
+  yazı ile farklı */
+
+  color: #ffffff;
+}
+
+.result-repository-container {
+  position: absolute;
+  width: 548px;
+  height: 91px;
+
+  background: #0a0a0a;
+  border: 1px solid #292929;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.result-repository-container-name {
+  position: absolute;
+  left: 4.74%;
+  right: 78.28%;
+  top: 27.47%;
+  bottom: 52.75%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #ffffff;
+}
+.result-repository-container-description {
+  position: absolute;
+  left: 4.56%;
+  right: 40.15%;
+  top: 52.75%;
+  bottom: 27.47%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #acacac;
+}
+
+.result-repository-stars {
+  position: absolute;
+  left: 83.58%;
+  right: 4.56%;
+  top: 27.47%;
+  bottom: 52.75%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.result-repository-stars-word {
+  position: absolute;
+  left: 88.69%;
+  right: 4.56%;
+  top: 52.75%;
+  bottom: 27.47%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #acacac;
+}
+
+.information-number {
+  position: absolute;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height */
+  bottom: 20.42%;
+  color: #ffffff;
+  text-align: center;
+}
+
+.information-headline {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  bottom: 13.51%;
+  color: #acacac;
+  text-align: center;
 }
