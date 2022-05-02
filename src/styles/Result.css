@@ -1,40 +1,40 @@
 .general-container {
+  display: flex;
   align-items: center;
   flex-direction: column;
-  height: 1850px;
   background-color: black;
 }
 .home-container {
-  margin-top: 300px; /* this will be changed. pixel perfect olacak. */
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
 
 .result-top-container {
+  display: flex;
   align-items: center;
   flex-direction: column;
   background: #0a0a0a;
   border: 1px solid #292929;
   box-sizing: border-box;
   border-radius: 4px;
-  position: absolute;
-  top: 16.82%;
   width: 548px;
   height: 277px;
+  margin-top: 166px;
 }
 .result-top-container-logo {
-  position: absolute;
   width: 112px;
   height: 112px;
   border-radius: 100%;
-  right: 39.78%;
-  bottom: 80%; /* this will be changed. pixel perfect olacak. */
+  display: flex;
+  position: relative;
+  top: -56px;
   background: #222222;
 }
 .result-top-container-right {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
+  position: absolute;
+  left: 59.34%; /* tekrar bakılacak */
 }
 .result-view-on-github {
   font-family: "Roboto Mono";
@@ -45,14 +45,16 @@
   text-align: center;
 
   color: #e5e5e5;
-  margin-right: 5px;
+}
+
+.result-top-container-informations {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-right: 12px;
 }
 
 .result-top-container-name {
-  position: absolute;
-  left: 41.23%;
-  top: 26.14%;
-
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
@@ -61,10 +63,6 @@
   color: #ffffff;
 }
 .result-top-container-username {
-  position: absolute;
-  left: 41.98%;
-  top: 35.55%;
-
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
@@ -81,7 +79,7 @@
   border-radius: 4px;
   width: 548px;
   height: 44px;
-  margin-top: 736px;
+  margin-top: 25px;
 }
 
 .load-more-button-p {
@@ -95,10 +93,11 @@
 }
 
 .result-repository-container {
-  position: absolute;
   width: 548px;
   height: 91px;
-
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
   background: #0a0a0a;
   border: 1px solid #292929;
   box-sizing: border-box;
@@ -110,11 +109,6 @@
 }
 .result-repository-container:hover .result-repository-container-name {
   color: #0a0a0a;
-  position: absolute;
-  left: 4.74%;
-  right: 78.28%;
-  top: 27.47%;
-  bottom: 52.75%;
 
   font-family: "Roboto Mono";
   font-style: normal;
@@ -123,12 +117,6 @@
   line-height: 18px;
 }
 .result-repository-container:hover .result-repository-stars {
-  position: absolute;
-  left: 83.58%;
-  right: 4.56%;
-  top: 27.47%;
-  bottom: 52.75%;
-
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
@@ -140,11 +128,10 @@
   color: #0a0a0a;
 }
 .result-repository-headline {
-  position: absolute;
   width: 126px;
   height: 17px;
-  top: 473px;
-
+  margin-bottom: 17px;
+  margin-top: 30px;
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
@@ -158,12 +145,6 @@
 }
 
 .result-repository-container-name {
-  position: absolute;
-  left: 4.74%;
-  right: 78.28%;
-  top: 27.47%;
-  bottom: 52.75%;
-
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
@@ -173,12 +154,6 @@
   color: #ffffff;
 }
 .result-repository-container-description {
-  position: absolute;
-  left: 4.56%;
-  right: 40.15%;
-  top: 52.75%;
-  bottom: 27.47%;
-
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
@@ -189,31 +164,18 @@
 }
 
 .result-repository-stars {
-  position: absolute;
-  left: 83.58%;
-  right: 4.56%;
-  top: 27.47%;
-  bottom: 52.75%;
-
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   /* identical to box height */
-
   text-align: center;
 
   color: #ffffff;
 }
 
 .result-repository-stars-word {
-  position: absolute;
-  left: 88.69%;
-  right: 4.56%;
-  top: 52.75%;
-  bottom: 27.47%;
-
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
@@ -227,14 +189,12 @@
 }
 
 .information-number {
-  position: absolute;
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
   /* identical to box height */
-  bottom: 20.42%;
   color: #ffffff;
   text-align: center;
 }
@@ -245,8 +205,6 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  position: absolute;
-  bottom: 13.51%;
   color: #acacac;
   text-align: center;
 }

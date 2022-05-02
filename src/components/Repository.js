@@ -5,19 +5,22 @@ const Repository = ({ repo, id }) => {
   return (
     <div
       onClick={() => window.open(repo.html_url)}
-      style={{ top: `${514 + 106 * id}px` }}
       className="result-repository-container"
     >
-      <div
-        style={{ width: "300px" }}
-        className="result-repository-container-name"
-      >
-        {repo.name}
+      <div style={{ marginLeft: "26px" }}>
+        <p
+          style={{ width: "300px" }}
+          className="result-repository-container-name"
+        >
+          {repo.name}
+        </p>
+        <p className="result-repository-container-description">
+          {repo.description && repo.description.length > 100
+            ? `${repo.description.slice(0, 140)}...`
+            : repo.description}
+        </p>
       </div>
-      <div className="result-repository-container-description">
-        {repo.description}
-      </div>
-      <div className="result-repository-container-stars">
+      <div style={{ marginRight: "23px" }}>
         <p className="result-repository-stars">{repo.stargazers_count}</p>
         <p className="result-repository-stars-word">Stars</p>
       </div>
