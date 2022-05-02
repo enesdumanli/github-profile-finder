@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Result.css";
+import view from "../utils/view.svg";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Repository from "./Repository";
@@ -8,6 +9,7 @@ const Result = () => {
   const location = useLocation();
   const [user, setUser] = useState([]);
   const [repos, setRepos] = useState([]);
+  const [currentSlice, setCurrentSlice] = useState(2);
   const search = location.state.search;
 
   const dummyRepos = [
@@ -58,6 +60,13 @@ const Result = () => {
               src={user.avatar_url}
               alt="logo"
             />
+            <div
+              onClick={() => window.open(user.html_url)}
+              className="result-top-container-right"
+            >
+              <p className="result-view-on-github">View on Github</p>
+              <img src={view} alt="dana" />
+            </div>
             <div className="result-top-container-name">{user.name}</div>
             <div className="result-top-container-username">@{user.login}</div>
             <div className="result-top-container-informations">
@@ -106,9 +115,16 @@ const Result = () => {
             </div>
           </div>
           <div className="result-repository-headline"></div>
-          {repos.map((repo, index) => (
+          {repos.slice(0, currentSlice).map((repo, index) => (
             <Repository repo={repo} id={index} />
           ))}
+          {/*reposu slice yap başta 0,2 arası. buton tıklanırsa 2 aralığını arttır. */}
+          <button
+            onClick={() => setCurrentSlice(currentSlice + 2)}
+            className="load-more-button"
+          >
+            <p className="load-more-button-p">Load More</p>
+          </button>
         </div>
       ) : (
         <div className="general-container">

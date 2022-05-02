@@ -1,7 +1,7 @@
 .general-container {
   align-items: center;
   flex-direction: column;
-  height: 850px;
+  height: 1850px;
   background-color: black;
 }
 .home-container {
@@ -31,6 +31,23 @@
   bottom: 80%; /* this will be changed. pixel perfect olacak. */
   background: #222222;
 }
+.result-top-container-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.result-view-on-github {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #e5e5e5;
+  margin-right: 5px;
+}
+
 .result-top-container-name {
   position: absolute;
   left: 41.23%;
@@ -57,6 +74,71 @@
   color: #ffffff;
 }
 
+.load-more-button {
+  background: #0da090;
+  border: 1px solid #72f2e4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 548px;
+  height: 44px;
+  margin-top: 736px;
+}
+
+.load-more-button-p {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #ffffff;
+}
+
+.result-repository-container {
+  position: absolute;
+  width: 548px;
+  height: 91px;
+
+  background: #0a0a0a;
+  border: 1px solid #292929;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.result-repository-container:hover {
+  background: white;
+}
+.result-repository-container:hover .result-repository-container-name {
+  color: #0a0a0a;
+  position: absolute;
+  left: 4.74%;
+  right: 78.28%;
+  top: 27.47%;
+  bottom: 52.75%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.result-repository-container:hover .result-repository-stars {
+  position: absolute;
+  left: 83.58%;
+  right: 4.56%;
+  top: 27.47%;
+  bottom: 52.75%;
+
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  /* identical to box height */
+
+  text-align: center;
+  color: #0a0a0a;
+}
 .result-repository-headline {
   position: absolute;
   width: 126px;
@@ -73,17 +155,6 @@
   yazı ile farklı */
 
   color: #ffffff;
-}
-
-.result-repository-container {
-  position: absolute;
-  width: 548px;
-  height: 91px;
-
-  background: #0a0a0a;
-  border: 1px solid #292929;
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .result-repository-container-name {
