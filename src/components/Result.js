@@ -44,7 +44,7 @@ const Result = () => {
         setRepos(data);
       })
     );
-  }, []);
+  }, [search]);
 
   return (
     <div>

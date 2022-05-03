@@ -16,7 +16,7 @@ const Repository = ({ repo, id }) => {
         </p>
         <p className="result-repository-container-description">
           {repo.description && repo.description.length > 100
-            ? `${repo.description.slice(0, 60)}...`
+            ? `${repo.description.slice(0, 80)}...`
             : repo.description}
         </p>
       </div>
