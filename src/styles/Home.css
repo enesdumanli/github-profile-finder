@@ -1,14 +1,12 @@
 .general-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  height: 850px;
   background-color: black;
 }
 .home-container {
-  margin-top: 300px; /* this will be changed. pixel perfect olacak. */
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -26,11 +24,14 @@
   border: 1px solid #292929;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 270px;
+  width: 320px;
   height: 44px;
-  left: 596px;
-  top: 549px;
   padding-left: 15px;
+  font-family: "Roboto", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 #someinput::placeholder {

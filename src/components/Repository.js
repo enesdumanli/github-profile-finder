@@ -16,13 +16,18 @@ const Repository = ({ repo, id }) => {
         </p>
         <p className="result-repository-container-description">
           {repo.description && repo.description.length > 100
-            ? `${repo.description.slice(0, 140)}...`
+            ? `${repo.description.slice(0, 60)}...`
             : repo.description}
         </p>
       </div>
       <div style={{ marginRight: "23px" }}>
         <p className="result-repository-stars">{repo.stargazers_count}</p>
-        <p className="result-repository-stars-word">Stars</p>
+        <p
+          style={id < 0 ? { display: "none" } : {}}
+          className="result-repository-stars-word"
+        >
+          Stars
+        </p>
       </div>
     </div>
   );

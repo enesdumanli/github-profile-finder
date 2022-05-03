@@ -7,25 +7,22 @@ function Home() {
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
-      console.log(e);
       navigate("/result", { state: { search: e.target.value } });
     }
   };
 
   return (
-    <div className="general-container">
+    <div style={{ height: window.innerHeight }} className="general-container">
       <div className="home-container">
         <img src={dana} alt="dana" />
         <p className="text">Github Profile Explorer</p>
-        <form>
-          <input
-            id="someinput"
-            placeholder={"Type a username"}
-            className="input-form"
-            type="text"
-            onKeyPress={handleEnter}
-          />
-        </form>
+
+        <input
+          id="someinput"
+          placeholder={"Type username"}
+          type="text"
+          onKeyPress={handleEnter}
+        />
       </div>
     </div>
   );

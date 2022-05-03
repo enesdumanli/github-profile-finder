@@ -34,10 +34,9 @@
 .result-top-container-right {
   display: flex;
   position: absolute;
-  left: 59.34%; /* tekrar bakılacak */
 }
 .result-view-on-github {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -55,20 +54,21 @@
 }
 
 .result-top-container-name {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+  position: relative;
+  margin-top: -30px;
 }
 .result-top-container-username {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-
   color: #ffffff;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .load-more-button-p {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -110,14 +110,14 @@
 .result-repository-container:hover .result-repository-container-name {
   color: #0a0a0a;
 
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
 }
 .result-repository-container:hover .result-repository-stars {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -132,7 +132,7 @@
   height: 17px;
   margin-bottom: 17px;
   margin-top: 30px;
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -145,7 +145,7 @@
 }
 
 .result-repository-container-name {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -154,7 +154,7 @@
   color: #ffffff;
 }
 .result-repository-container-description {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -164,7 +164,7 @@
 }
 
 .result-repository-stars {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -176,7 +176,7 @@
 }
 
 .result-repository-stars-word {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -184,12 +184,13 @@
   /* identical to box height */
 
   text-align: center;
-
+  position: relative;
+  margin-top: -7px;
   color: #acacac;
 }
 
 .information-number {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -197,14 +198,43 @@
   /* identical to box height */
   color: #ffffff;
   text-align: center;
+  position: relative;
+  bottom: -30px;
 }
 
 .information-headline {
-  font-family: "Roboto Mono";
+  font-family: "Roboto", monospace;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   color: #acacac;
   text-align: center;
+  position: relative;
+  bottom: -20px;
+}
+
+.error-container {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 344px;
+  height: 78px;
+  background: #842323;
+  border: 1px solid #cb7474;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.error-container-para {
+  font-family: "Roboto", monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  width: 89.5%;
+  color: #ffffff;
 }

@@ -10,17 +10,18 @@ const Result = () => {
   const [user, setUser] = useState([]);
   const [repos, setRepos] = useState([]);
   const [currentSlice, setCurrentSlice] = useState(2);
+  const [userNotFound, setUserNotFound] = useState(false);
   const search = location.state.search;
 
   const dummyRepos = [
     {
-      id: 0,
+      id: -2,
       open_issues: 0,
       watchers: 0,
       default_branch: "main",
     },
     {
-      id: 1,
+      id: -1,
       open_issues: 0,
       watchers: 0,
       default_branch: "main",
@@ -31,11 +32,12 @@ const Result = () => {
     fetch(`https://api.github.com/users/${search}`, {
       method: "GET",
     }).then((response) =>
-      response.json().then((data) => {
-        setUser(data);
-      })
+      response.ok
+        ? response.json().then((data) => setUser(data))
+        : setUserNotFound(true)
     );
     fetch(`https://api.github.com/users/${search}/repos`, {
+      per_page: 10,
       method: "GET",
     }).then((response) =>
       response.json().then((data) => {
@@ -57,6 +59,7 @@ const Result = () => {
             <div
               onClick={() => window.open(user.html_url)}
               className="result-top-container-right"
+              style={{ right: `${window.innerWidth / 2 - 254}px` }}
             >
               <p className="result-view-on-github">View on Github</p>
               <img src={view} alt="viewgithub" />
@@ -86,7 +89,7 @@ const Result = () => {
           <button
             onClick={() => setCurrentSlice(currentSlice + 2)}
             className="load-more-button"
-            style={currentSlice > 2 ? { marginBottom: "200px" } : {}}
+            style={currentSlice > 2 ? { marginBottom: "153px" } : {}}
           >
             <p className="load-more-button-p">Load More</p>
           </button>
@@ -108,9 +111,17 @@ const Result = () => {
             style={{ background: "#222222" }}
             className="result-repository-headline"
           ></div>
-          {dummyRepos.map((repo, index) => (
-            <Repository repo={repo} id={index} />
+          {dummyRepos.map((repo) => (
+            <Repository repo={repo} id={repo.id} />
           ))}
+          <div
+            style={userNotFound ? {} : { visibility: "hidden" }}
+            className="error-container"
+          >
+            <p className="error-container-para">
+              Couldn't load the user profile. Please try again.
+            </p>
+          </div>
         </div>
       )}
     </div>
